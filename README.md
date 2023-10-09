@@ -35,6 +35,21 @@ You can, of course, move up and down this ladder of difficulty as you see fit yo
 
 The authors of the papers referenced above claim that their galaxy catalog is approximately complete because it is a *representative* sample of a particular volume in space (the ball of radius 11 megaparsecs centered on you and me). There are, however, some signs that the smaller objects are under-represented in the sample. Can you make a plot that reveals this tendency and a likely explanation?
 
+Explanation:
+Histogram display the distribution of galaxies by size, in which the majority of galaxies are distributed at
+the lower range of sizes. Somewhat surprisingly, there are relatively few of the smallest galaxies in the first bin,
+compared to the subsequent 6 bins. From looking at the histogram alone, it could be inferred that the smallest
+galaxies of size ~ 1 kpc are significantly less numerous than galaxies of size ~2-5 kpc. Galaxies larger than 5 kpc
+are decreasing in size, e.g., increasingly rare. However, it cannot be inferred from the histogram alone that
+smaller objects are under-represented in the sample, and not displaying the natural distribution of galaxies´ size.
+
+Looking at the scatterplot, the relationship between size and distance to galaxy is displayed. There are
+no obvious signs that our detection methods are less effective for smaller galaxies that are farther away.
+What we do see is that the smoother line using the default LOESS method to fit a smooth curve does not include the smallest galaxies,
+which could indicate that smaller galaxies might be underrepresented in the dataset.
+However, it might also indicating a bias in the dataset towards larger galaxies. Using the lm-method fixes this - displaying the
+line using linear regression method.
+
 ## Problem 4 (optional)
 
 Edwin Hubble made two remarkable discoveries that forever changed our perspective of space and time. In 1924 he discovered that the Andromeda nebula was a separate galaxy of stars millions of light-years away, which was startling. The scale of the universe was then restricted to the Milky Way measured in thousands of light-years. A few years later, he also noticed that the speed at which other galaxies move away from us is proportional to their distance. He discovered the expansion of space, which, if rewinded, ends up in a singular starting point of time and space itself, the Big Bang.
