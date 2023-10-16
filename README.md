@@ -1,11 +1,12 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/ojZuXTA9)
 # :wave: Welcome to the first assignment in BAN400!
 This is the first assignment in BAN400. As you know -- given that you have come this far -- the assignments in BAN400 will be organized through Github and Github Classroom. By accepting this assignment, the repository will be copied to your Github user so that you can clone it to your own personal machine and work on it. Then, you simply commit your changes and push back to Github when you are done. You can commit and push as much as you want before the deadline. **Do not close the pull request for this repository, that is where the TAs will provide feedback for your work!**
 
-**Date:**
+**Date: 04.10.2023 **
 
-**Name:**
+**Name: Matias Kongsvik **
 
-**Student number:**
+**Student number: s194718 **
 
 ## :information_source: Problem 1
 Update the personal information above.
@@ -33,6 +34,21 @@ You can, of course, move up and down this ladder of difficulty as you see fit yo
 ## Problem 3
 
 The authors of the papers referenced above claim that their galaxy catalog is approximately complete because it is a *representative* sample of a particular volume in space (the ball of radius 11 megaparsecs centered on you and me). There are, however, some signs that the smaller objects are under-represented in the sample. Can you make a plot that reveals this tendency and a likely explanation?
+
+Explanation:
+Histogram display the distribution of galaxies by size, in which the majority of galaxies are distributed at
+the lower range of sizes. Somewhat surprisingly, there are relatively few of the smallest galaxies in the first bin,
+compared to the subsequent 6 bins. From looking at the histogram alone, it could be inferred that the smallest
+galaxies of size ~ 1 kpc are significantly less numerous than galaxies of size ~2-5 kpc. Galaxies larger than 5 kpc
+are decreasing in size, e.g., increasingly rare. However, it cannot be inferred from the histogram alone that
+smaller objects are under-represented in the sample, and not displaying the natural distribution of galaxies´ size.
+
+Looking at the scatterplot, the relationship between size and distance to galaxy is displayed. There are
+no obvious signs that our detection methods are less effective for smaller galaxies that are farther away.
+What we do see is that the smoother line using the default LOESS method to fit a smooth curve does not include the smallest galaxies,
+which could indicate that smaller galaxies might be underrepresented in the dataset.
+However, it might also indicating a bias in the dataset towards larger galaxies. Using the lm-method fixes this - displaying the
+line using linear regression method.
 
 ## Problem 4 (optional)
 
